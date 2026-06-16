@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Géoterria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .map-label {
+            background: rgba(15, 23, 42, 0.85) !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 4px !important;
+            padding: 3px 8px !important;
+            font-size: 0.8rem !important;
+            font-weight: 600 !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .leaflet-tooltip-top:before {
+            border-top-color: rgba(15, 23, 42, 0.85) !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/Logo.jpg" alt="Géoterria Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="societe.html">GEOTERRIA</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="references.html">Nos Références</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="annuaire.html">Annuaire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="classic-title-section">
+        <h2 class="classic-title">Nous contacter</h2>
+    </div>
+
+    <section class="container">
+        <div class="apc-partnership" style="margin-bottom: 3rem; padding: 0 0 2rem 0;">
+            <h2 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Notre Partenaire : APC Ingénierie</h2>
+            <p style="margin-bottom: 0.5rem;"><strong>Géoterria</strong> travaille en étroite synergie avec <strong>APC Ingénierie</strong>, bureau d'études et de contrôle indépendant spécialisé dans l'ingénierie des structures, des matériaux et du béton.</p>
+            <p>Ce partenariat stratégique au sein du <strong>Groupe GEOSUP</strong> nous permet de mutualiser nos compétences techniques, de nous s'appuyer sur <strong>4 laboratoires internes sols & béton</strong> et d'assurer une couverture nationale complète pour tous vos projets.</p>
+        </div>
+
+        <div class="contact-grid-classic" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem;">
+            
+            <div class="agences-list">
+                <h2 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--primary-blue); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem;">📍 Agences Géoterria</h2>
+                
+                <div class="agence-card-classic">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.2rem;">TOULON (Siège Social)</h3>
+                    <p>42 Av. Irène et Jean Frédéric Joliot Curie</p>
+                    <p>83130 LA GARDE</p>
+                    <p><strong>Tél :</strong> 04 94 27 87 40</p>
+                    <p><strong>Email :</strong> <a href="mailto:contact@geoterria.com" style="color: var(--accent-color); font-weight: bold;">contact@geoterria.com</a></p>
+                </div>
+
+                <div class="agence-card-classic">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.2rem;">AIX-EN-PROVENCE (SUD-EST)</h3>
+                    <p>Z.I Les Jalassières - 320 rue Topaze</p>
+                    <p>13510 EGUILLES</p>
+                    <p><strong>Tél :</strong> 04 42 26 14 15</p>
+                    <p><strong>Email :</strong> <a href="mailto:contacteguilles@geoterria.fr" style="color: var(--accent-color); font-weight: bold;">contacteguilles@geoterria.fr</a></p>
+                </div>
+
+                <div class="agence-card-classic">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.2rem;">TOULOUSE (SUD-OUEST)</h3>
+                    <p>Saint-Orens-de-Gameville (31700)</p>
+                    <p><strong>Tél :</strong> 05 62 27 12 82</p>
+                    <p><strong>Email :</strong> <a href="mailto:kfagot@geoterria.com" style="color: var(--accent-color); font-weight: bold;">kfagot@geoterria.com</a></p>
+                </div>
+
+                <h2 style="font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1.5rem; color: #d97706; border-bottom: 2px solid #f59e0b; padding-bottom: 0.5rem;">Agences APC Ingénierie</h2>
+                
+                <div class="agence-card-classic">
+                    <h3 style="color: #b45309; margin-bottom: 0.5rem; font-size: 1.2rem;">NANTES (Agence Nord-Ouest & Laboratoire)</h3>
+                    <p>P.A Biliais Deniaud</p>
+                    <p>3 rue Albert de Dion, 44360 VIGNEUX DE BRETAGNE</p>
+                </div>
+
+                <div class="agence-card-classic">
+                    <h3 style="color: #b45309; margin-bottom: 0.5rem; font-size: 1.2rem;">PARIS (Agence Île-de-France)</h3>
+                    <p>119-131 avenue René Morin</p>
+                    <p>91420 MORANGIS</p>
+                </div>
+            </div>
+            
+            <div>
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-blue);">Carte de nos implantations nationales</h2>
+                <div id="map" style="height: 450px; width: 100%; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 3rem; position: relative;"></div>
+
+                <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-blue);">Secteurs d'intervention (Grand Sud)</h2>
+                <div id="zone-map" style="height: 450px; width: 100%; border-radius: 8px; border: 1px solid #e2e8f0; position: relative;"></div>
+            </div>
+        </div>
+
+        <div class="btn-container-classic" style="text-align: center; margin: 4rem 0; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <a href="mailto:contact@geoterria.com" class="btn-classic btn-classic-primary" style="display: inline-block; text-decoration: none; border-radius: 30px; font-weight: bold; padding: 1rem 3rem; background-color: var(--primary-blue); color: white; font-size: 1.1rem;">Écrire un e-mail global à Géoterria</a>
+            <a href="https://fr.linkedin.com/company/geo-sup" target="_blank" class="btn-classic btn-classic-secondary" style="display: inline-block; text-decoration: none; border-radius: 30px; font-weight: bold; padding: 1rem 3rem; background-color: #0077b5; color: white;">Suivez-nous sur LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0; background: var(--primary-dark); color: white; margin-top: 3rem;">
+            <p style="font-weight: 600; color: #fff; margin-bottom: 0.5rem;">GEOTERRIA &copy; 2026</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Bureau d'Études Géotechniques & Ingénierie des Sols</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
