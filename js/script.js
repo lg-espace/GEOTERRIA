@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // =========================================================================
-    // 2. CARTE 2 : CARTE DES SECTEURS (GRAND SUD) - ZOOM ET CENTRAGE AJUSTÉS
+    // 2. CARTE 2 : CARTE DES SECTEURS (GRAND SUD) - MODIFIÉE
     // =========================================================================
     if (document.getElementById('zone-map')) {
         var zoneMap = L.map('zone-map').setView([43.7, 4.0], 6);
@@ -82,13 +82,21 @@ document.addEventListener("DOMContentLoaded", function() {
                     onEachFeature: function(feature, layer) {
                         var nomDept = feature.properties.nom;
                         var codeDept = feature.properties.code;
-                        var rattachement = "Hors zone d'intervention";
+                        var infoAgence = "";
                         
-                        if (toulouseDepts.includes(codeDept)) rattachement = "Rattaché à l'agence de TOULOUSE";
-                        if (aixDepts.includes(codeDept)) rattachement = "Rattaché à l'agence d'AIX-EN-PROVENCE";
-                        if (toulonDepts.includes(codeDept)) rattachement = "Rattaché au siège social de TOULON";
+                        // Ajout des informations spécifiques et des coordonnées de chaque agence
+                        if (toulouseDepts.includes(codeDept)) {
+                            infoAgence = "Rattaché à l'agence de TOULOUSE<br><b>Tél :</b> 05 62 27 12 82<br><b>Mail :</b> kfagot@geoterria.com";
+                        } else if (aixDepts.includes(codeDept)) {
+                            infoAgence = "Rattaché à l'agence d'AIX-EN-PROVENCE<br><b>Tél :</b> 04 42 26 14 15<br><b>Mail :</b> contacteguilles@geoterria.fr";
+                        } else if (toulonDepts.includes(codeDept)) {
+                            infoAgence = "Rattaché au siège social de TOULON<br><b>Tél :</b> 04 94 27 87 40<br><b>Mail :</b> contact@geoterria.com";
+                        }
 
-                        layer.bindPopup("<b>" + nomDept + " (" + codeDept + ")</b><br>" + rattachement);
+                        // On lie le popup UNIQUEMENT si le département fait partie d'une zone d'intervention
+                        if (infoAgence !== "") {
+                            layer.bindPopup("<b>" + nomDept + " (" + codeDept + ")</b><br>" + infoAgence);
+                        }
                     }
                 }).addTo(zoneMap);
 
