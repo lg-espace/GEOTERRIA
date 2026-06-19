@@ -337,3 +337,150 @@ footer {
         height: 350px;
     }
 }
+
+/* =============================================
+   MOBILE — écrans ≤ 768 px (iPhone inclus)
+   ============================================= */
+@media (max-width: 768px) {
+
+    /* --- Navigation --- */
+    .nav-container {
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        justify-content: flex-start;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        letter-spacing: 0;
+        padding: 0.4rem 0;
+    }
+
+    /* --- Hero --- */
+    .hero-premium {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .hero-premium h1 {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-premium p {
+        font-size: 1rem;
+    }
+
+    /* --- Titres classiques --- */
+    .classic-title {
+        font-size: 1.5rem;
+    }
+
+    .classic-title-section {
+        margin: 1.5rem auto 0.5rem auto;
+        padding: 0 1rem;
+    }
+
+    /* --- Intro block --- */
+    .intro-block {
+        margin: 3rem auto;
+        padding: 0 1.25rem;
+    }
+
+    .intro-block h2 {
+        font-size: 1.6rem;
+    }
+
+    /* --- Sections alternées --- */
+    .section-split {
+        padding: 3rem 0;
+    }
+
+    .split-container {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        padding: 0 1.25rem;
+    }
+
+    /* Annule le row-reverse sur mobile pour toujours afficher texte puis image */
+    .section-split:nth-child(even) .split-container {
+        flex-direction: column !important;
+    }
+
+    .split-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .split-text p {
+        font-size: 1rem;
+    }
+
+    .split-image-wrapper img {
+        height: 250px;
+    }
+
+    /* --- Portfolio masonry --- */
+    .portfolio-masonry {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .portfolio-item.featured {
+        grid-column: unset;
+    }
+
+    .portfolio-item img,
+    .portfolio-item.short img {
+        height: 260px;
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.85rem;
+    }
+
+    /* --- Contact grid --- */
+    .contact-grid-classic {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* --- Maps Leaflet --- */
+    #map,
+    #zone-map {
+        height: 300px !important;
+    }
+
+    /* --- Boutons --- */
+    .btn-classic {
+        padding: 0.85rem 1.75rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* --- Conteneur standard --- */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+        margin-top: 3rem;
+        padding: 2rem 1.25rem;
+    }
+}
