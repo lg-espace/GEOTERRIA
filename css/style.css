@@ -106,7 +106,7 @@ nav ul li a:hover::after {
     font-weight: 300;
 }
 
-/* Titre classique pour les pages Contact et Annuaire */
+/* Titre classique pour les pages Contact et autres */
 .classic-title-section {
     max-width: 1200px;
     margin: 3rem auto 1rem auto;
@@ -249,34 +249,11 @@ nav ul li a:hover::after {
     margin-bottom: 1.5rem;
 }
 
-/* Style de l'annuaire */
+/* Conteneurs standards */
 .container {
     max-width: 1200px;
     margin: 2rem auto 4rem auto;
     padding: 0 2rem;
-}
-
-.annuaire-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.annuaire-table th, .annuaire-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.annuaire-table th {
-    background-color: var(--primary-blue);
-    color: white;
-    font-weight: 600;
-}
-
-.annuaire-table tr:hover {
-    background-color: #f1f5f9;
 }
 
 /* Style de la page Contact */
